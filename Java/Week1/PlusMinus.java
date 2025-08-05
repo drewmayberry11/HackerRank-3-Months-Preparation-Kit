@@ -27,9 +27,15 @@ public class PlusMinus {
 
         // Compare performance and readability of different approaches
         System.out.println("\nBrute Force Plus Minus:");
+        System.out.println("Array 1");
+        plusMinusSolution(arr1);
+        System.out.println("Array 2");
         plusMinusSolution(arr2);
 
         System.out.println("\nModern Optimized Plus Minus:");
+        System.out.println("Array 1");
+        plusMinusModern(arr1);
+        System.out.println("Array 2");
         plusMinusModern(arr2);
     }
 
