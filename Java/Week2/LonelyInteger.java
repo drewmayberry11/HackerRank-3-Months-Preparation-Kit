@@ -102,11 +102,6 @@ public class LonelyInteger {
     /**
      * OPTIMAL XOR APPROACH: Use bit manipulation properties to cancel pairs
      * 
-     * Algorithm: XOR all elements together
-     * Key insight: XOR properties make this work elegantly
-     *   - a ⊕ a = 0 (identical numbers cancel out)
-     *   - a ⊕ 0 = a (XOR with 0 returns original number)
-     *   - XOR is commutative (order doesn't matter)
      * 
      * Result: All pairs cancel to 0, leaving only the unique element
      * 
