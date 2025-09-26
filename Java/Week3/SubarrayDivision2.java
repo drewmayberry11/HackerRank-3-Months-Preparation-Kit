@@ -1,4 +1,3 @@
-import java.util.List;
 
 /**
  * File: SubarrayDivision2.java
@@ -28,11 +27,13 @@ import java.util.List;
  * Related:
  * HackerRank — Subarray Division (Birthday Chocolate)
  * 
- * @see https://www.hackerrank.com/challenges/three-month-preparation-kit-the-birthday-bar
+ * @see Link: https://www.hackerrank.com/challenges/three-month-preparation-kit-the-birthday-bar
  *
  *      Author: Drew Mayberry
  *      Since: 2025-09-25
  */
+import java.util.List;
+
 public class SubarrayDivision2 {
 
     public static void main(String[] args) {
