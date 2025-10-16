@@ -47,6 +47,8 @@ public class LeftRotation {
 
         System.out.println();
         System.out.println(rotateLeftJdk(d, arr2)); // same using Collections.rotate
+        System.out.println();
+        System.out.println(rotateLeftBrute(d, arr2)); // same using Collections.rotate
     }
 
     /**
@@ -75,6 +77,27 @@ public class LeftRotation {
     public static List<Integer> rotateLeftJdk(int d, List<Integer> arr) {
         List<Integer> rotated = new ArrayList<>(arr); // must be mutable
         Collections.rotate(rotated, -d); // negative = left
+        return rotated;
+    }
+
+    /**
+     * Left-rotate by d positions the "brute-force" way:
+     * repeat k times: remove first element, append to end.
+     * Time: O(n * k) Space: O(1) extra (beyond the copy).
+     */
+    public static List<Integer> rotateLeftBrute(int d, List<Integer> arr) {
+        int n = arr.size();
+        if (n == 0)
+            return List.of(); // guard empty input
+
+        int k = Math.floorMod(d, n); // normalize d into [0, n)
+        List<Integer> rotated = new ArrayList<>(arr); // mutable working copy
+
+        // One left-rotation step = take head → push to tail
+        for (int step = 0; step < k; step++) {
+            int first = rotated.remove(0); // shifts others left by one
+            rotated.add(first); // wrap the saved head to the end
+        }
         return rotated;
     }
 }
